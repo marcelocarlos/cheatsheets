@@ -108,31 +108,31 @@ source ~/$CONFIG_FILENAME
 # a colon means that a parameter is expected after the option selected
 while getopts "lvh" OPTION
 do
-	case $OPTION in
+  case $OPTION in
     l)
       list_cheat_files
       exit 0
       ;;
-		v)
-			echo "$APP_NAME $VERSION"
-			exit 0
-			;;
+    v)
+      echo "$APP_NAME $VERSION"
+      exit 0
+      ;;
     h)
       usage
       exit 0
       ;;
-		?)
-			usage
-			exit 128
-			;;
-	esac
+    ?)
+      usage
+      exit 128
+      ;;
+  esac
 done
 # shift all processed options away, so it brings the positional parameters to the correct position
 shift $((OPTIND-1))
 
 if [ $# -ne "1" ]; then
-	usage
-	exit 11;
+  usage
+  exit 11;
 else
   display_cheats $1
   exit 0
