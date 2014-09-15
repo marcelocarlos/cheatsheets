@@ -9,3 +9,6 @@ for i in *.md; do echo $i; done
 
 # for loop running a command
 for i in `find ./ -maxdepth 1 -type f`; do echo $i; done
+
+# for loop "classic"
+for (( c=1; c<=5; c++ )); do echo $c; done
