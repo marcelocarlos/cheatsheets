@@ -5,7 +5,7 @@
 ```bash
 git clone https://github.com/marcelocarlosbr/cheatsheets.git
 cd cheatsheets
-chmod +x cheatsheets
+chmod +x cheatsheets.sh
 sudo cp cheatsheets.sh /usr/local/bin/
 cp -r cheatsheets $HOME/.cheatsheets
 ```
