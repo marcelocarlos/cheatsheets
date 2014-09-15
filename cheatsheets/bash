@@ -1,0 +1,11 @@
+# for loop using incremental counter
+for i in {01..05}; do echo $i; done
+
+# for loop in a defined list
+for i in apple pear grape; do echo $i; done
+
+# for loop in a file list
+for i in *.md; do echo $i; done
+
+# for loop running a command
+for i in `find ./ -maxdepth 1 -type f`; do echo $i; done
