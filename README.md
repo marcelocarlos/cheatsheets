@@ -2,6 +2,8 @@
 
 A script to display cheat sheets
 
+A script to display cheat sheets
+
 ## Install
 
 Installation instructions for OS X and Linux
