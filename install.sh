@@ -69,4 +69,4 @@ do
   esac
 done
 
-install_it $1
+install_it
