@@ -2,26 +2,12 @@
 
 ## Install
 
+Installation instructions for OS X and Linux
+
 ```bash
 git clone https://github.com/marcelocarlosbr/cheatsheets.git
 cd cheatsheets
-chmod +x cheatsheets.sh
-sudo cp cheatsheets.sh /usr/local/bin/
-cp -r cheatsheets $HOME/.cheatsheets
-```
-
-Enabling bash completion:
-
-Linux:
-
-```bash
-sudo cp autocompletion/cheatsheets.bash /etc/bash_completion.d/
-```
-
-Mac OS X (assuming you have bash completion installed  via homebrew)
-
-```bash
-sudo cp autocompletion/cheatsheets.bash $(brew --prefix)/etc/bash_completion.d/
+./install # or use ./install -l to create symbolic links instead of copying files
 ```
 
 Note that if you change the script name (e.g. removing the .sh extension), you might have to adjust the contents of cheatsheets.bash to make it work.
