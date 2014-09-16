@@ -12,3 +12,15 @@ for i in `find ./ -maxdepth 1 -type f`; do echo $i; done
 
 # for loop "classic"
 for (( c=1; c<=5; c++ )); do echo $c; done
+
+# get the last word of the previous command
+!$ # (e.g. ls !$)
+
+# truncating a file
+> filename
+
+# stderr to stdout
+mycommand 2>&1
+
+# stderr and stdout to a file
+mycommand &> /tmp/file
