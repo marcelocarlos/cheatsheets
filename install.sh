@@ -15,7 +15,7 @@ LINK_FILES=0
 function usage() {
 
   cat << EOF
-Usage: $APP_NAME [options] <path>
+Usage: $APP_NAME [options]
 
 Options:
   -l      link files instead of copying
