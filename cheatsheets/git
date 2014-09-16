@@ -1,0 +1,16 @@
+# Setting identity
+git config --global user.name "John Smith"
+git config --global user.email johnsmith@example.com
+
+# compare local git branch with a remote branch
+git diff master origin/master
+
+# ignoring changes on versioned files
+git update-index --assume-unchanged path/to/file
+git update-index --no-assume-unchanged path/to/file.txt # to roll back
+
+# delete a local branch
+git branch -d branchname
+
+# delete a remote branch
+git push origin :branchname
