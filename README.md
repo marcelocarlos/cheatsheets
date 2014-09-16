@@ -2,8 +2,6 @@
 
 A script to display cheat sheets
 
-A script to display cheat sheets
-
 ## Install
 
 Installation instructions for OS X and Linux
@@ -17,7 +15,6 @@ cd cheatsheets
 Note that if you change the script name (e.g. removing the .sh extension), you might have to adjust the contents of cheatsheets.bash to make it work.
 
 ## Usage
-
 
 List available cheat sheets:
 
