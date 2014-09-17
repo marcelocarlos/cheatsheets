@@ -9,15 +9,57 @@ git remote -v
 git remote set-url origin https://github.com/USERNAME/REPOSITORY.git # or
 git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 
-# compare local git branch with a remote branch
-git diff master origin/master
+# compare branches 
+git diff branch1 branch2 # local local
+git diff master origin/master # local remote
+
+# Viw the contents of a commit
+git show git diff c8cf932
+git show c8cf932:path/to/sile # for a specific file
 
 # ignoring changes on versioned files
 git update-index --assume-unchanged path/to/file
 git update-index --no-assume-unchanged path/to/file.txt # to roll back
+
+# create and checkout a new branch
+git checkout -b my_branch
+
+# push the new branch to remote
+git push -u origin my_branch
+
+# merging a branch to master
+git checkout master
+git merge my_branch
 
 # delete a local branch
 git branch -d branchname
 
 # delete a remote branch
 git push origin :branchname
+
+# Remove untracked files
+git clean -f -d
+
+# To remove untracked and ignored files
+git clean -f -d -x
+
+# adding submodules
+git submodule add git@github.com/USERNAME/MODREPO.git modrepo
+
+# initialize submodule and fetch data
+git submodule update --init
+
+# update all submodules
+git submodule foreach git pull origin master
+
+# update specific submodule
+cd path/to/submodule/directory
+git pull origin master
+
+# Configuring a remote fork (upstream)
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
+
+# Syncing a fork (fetching upstream)
+git fetch upstream
+git checkout master
+git merge upstream/master
