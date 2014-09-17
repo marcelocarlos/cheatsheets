@@ -1,0 +1,14 @@
+# print date in format YYYY-MM-DD
+date +"%Y-%m-%d"
+
+# print in format YYYY-MM-DD_HHmm
+date +"%Y%m%d_%H%M" # add %S for seconds
+
+# print in format YYYY-Month-DD (e.g. 2014-Jan-01)
+date +"%Y-%b-%d"
+
+# print current timestamp
+date +%s
+
+# convert a timestamp to date (e.g. date -d @1410976630)
+date -d @TIMESTAMP_HERE # you can then format the output by adding +"%Y-%b-%d", for example.
