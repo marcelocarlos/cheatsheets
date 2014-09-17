@@ -2,6 +2,13 @@
 git config --global user.name "John Smith"
 git config --global user.email johnsmith@example.com
 
+# show remotes
+git remote -v
+
+# change remote url
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git # or
+git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+
 # compare local git branch with a remote branch
 git diff master origin/master
 
