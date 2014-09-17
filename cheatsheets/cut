@@ -1,0 +1,2 @@
+# Cut out second element of a text delimited by ' ':
+cut -d' ' -f2
