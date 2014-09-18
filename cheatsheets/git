@@ -13,6 +13,9 @@ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 git diff branch1 branch2 # local local
 git diff master origin/master # local remote
 
+# get a list of modified files between the current and a given branche
+git diff --name-only <targetbranch>
+
 # Viw the contents of a commit
 git show git diff c8cf932
 git show c8cf932:path/to/sile # for a specific file
@@ -63,3 +66,6 @@ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
 git fetch upstream
 git checkout master
 git merge upstream/master
+
+# retrieve version of a file from a given commit
+git checkout <commit> path/to/file
