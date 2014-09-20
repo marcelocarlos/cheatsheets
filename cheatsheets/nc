@@ -1,0 +1,10 @@
+# run in server mode
+nc -l <port> # use -w <seconds> to set timeout
+
+# client mode
+nc <host> <port>
+
+# transfer a file
+nc -l <port> > test
+cat myfile | nc <host> <port>
+
