@@ -1,0 +1,8 @@
+# print filenames from a ls command
+ls -l * | awk '{ print $9 }'
+
+# same as before, but adding more information
+ls -l * | awk '{ print "Name: " $9 "\t Owner: " $3 }'
+
+# sum numbers from an input:
+printf '5\n4.5\n0.5\n' | awk '{ sum += $1} END {print "Total: " sum}'
