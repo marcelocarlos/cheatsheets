@@ -1,0 +1,10 @@
+# run a command now (e.g. display a desktop notification)
+echo "notify-send Hello" | at now
+# time values can be: now, noon, midnight, hh:mm, hh:mm MM/DD/YYY
+# and some derivatives: now + X {minutes | hours | days | weeks}
+
+# list queue
+atq
+
+# delete entry X
+atrm X
