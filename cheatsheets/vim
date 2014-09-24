@@ -1,0 +1,11 @@
+# Keyboard shortcuts
+# Command                     # Shortcut / command        # Plugin
+split windows                 :vsplit <filename>          -
+split windows (read-only)     :sview <filename>           -
+edit another file             :e filename                 -
+open buffer                   :b <buffer-number>          -
+switch between windows        CTRL + ww                   -
+switch to window              CTRL + arrow                -
+full path file search         CTRL + p                    ctrlp.vim
+multi line comment            gc (Visual Mode)            tcomment_vim
+multiple cursors              CTRL + n                    vim-multiple-cursors
