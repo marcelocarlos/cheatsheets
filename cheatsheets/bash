@@ -24,3 +24,6 @@ mycommand 2>&1
 
 # stderr and stdout to a file
 mycommand &> /tmp/file
+
+# run script in debug mode
+bash -x ./myscript.sh
