@@ -4,8 +4,15 @@ split windows                 :vsplit <filename>          -
 split windows (read-only)     :sview <filename>           -
 edit another file             :e filename                 -
 open buffer                   :b <buffer-number>          -
+list buffers                  :ls                         -
 switch between windows        CTRL + ww                   -
 switch to window              CTRL + arrow                -
 full path file search         CTRL + p                    ctrlp.vim
-multi line comment            gc (Visual Mode)            tcomment_vim
 multiple cursors              CTRL + n                    vim-multiple-cursors
+
+# Visual Mode
+indent                        > 
+unindent                      <
+multi line comment            gc                          tcomment_vim
+switch case                   ~
+
