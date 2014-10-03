@@ -1,2 +1,5 @@
 # Cut out second element of a text delimited by ' ':
-cut -d' ' -f2
+cut -d' ' -f2 data.txt
+
+# Cut out the first-through-second and fourth-through-fifth field of each line, omitting the third
+cut -f 1-2,4-5 data.txt
