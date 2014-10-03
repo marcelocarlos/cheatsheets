@@ -1,0 +1,21 @@
+# Find directories only
+find . -type d
+
+# Find files only
+find . -type f
+
+# Find files by permission
+find . -type f -perm 555
+
+# Find files modified within the last 7 days and list details (ls)
+# atime (accessed) ctime (last changed)
+find . -type f -mtime -7 -ls 
+
+# Find files modified more than 7 days ago
+find . -type f -mtime +7 -ls
+
+# find files larger than 10MB
+find . -size +10M -type f
+
+# find specific files and delete them
+find . -name '*.bkp' -exec rm -f '{}' \;
