@@ -75,7 +75,7 @@ function list_cheat_files() {
   echo -e " ${BLACK}(Cheat sheets files are at: ${CHEAT_LIST_PATH})${RESET}"
   echo "------------------------------------------------------------------"
   echo ""
-  for entry in `find "$CHEAT_LIST_PATH"/ -maxdepth 1 -type f`
+  for entry in `find "$CHEAT_LIST_PATH"/ -maxdepth 1 -type f | sort`
   do
     echo "  - $(basename $entry)"
   done
