@@ -1,0 +1,48 @@
+# get selinux status
+sestatus
+
+# get selinux enforce mode
+getenforce
+
+# list selinux modules
+semodule -l 
+
+# list policies
+semanage boolean -l 
+
+# get status of a specific policy
+getsebool ftpd_anon_write
+
+# enable / disable policies (use -P to make permanent)
+setsebool allow_ftpd_anon_write true
+
+# show information about the components
+# -t for types, -a for attributes, -r for roles, -u for users, -b for booleans
+seinfo -t
+
+# display security context of files /paths
+ls -Z /my/path
+
+# show security context of processes
+ps -efZ
+
+# change the context of a file
+chcon --type <context-name: e.g. var_t> /path/to/file
+
+# permanently change the context of a file (e.g. /www) (you need to run restorecon after this)
+semanage fcontext --add --type httpd_sys_content_t "/www(/.*)?"
+
+# restore context of a file
+restorecon -v /path/to/file
+
+# check whether a file/path's current context is consistent with what is in the SELinux context db
+matchpathcon -V /path/to/file
+
+# see mappings between Linux user and SELinux users
+semanage login -l
+
+# see a list of SELinux users
+semanage user -l
+
+# map user (myuser) to a SELinux user (user_u)
+semanage login -a -s user_u myuser
