@@ -1,0 +1,17 @@
+# convert a jpg file to png
+convert original.jpg target.png
+
+# scale image and convert at the same time
+conver original.jpg -resize 50% target.png
+
+# resize an image to a fixed width (keeping height proportional):
+convert original.jpg -resize 500x target.jpg
+
+# resize an image to a fixed height (keeping width proportional):
+convert original.jpg -resize x500 target.jpg
+
+# rotating image
+convert original.jpg -rotate 90 target.jpgo
+
+# apply grayscale filter (see convert --help for more filter)
+convert original.jpg -colorspace Gray target.jpg # use (-separate to separate into gray channels)
