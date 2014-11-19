@@ -1,0 +1,9 @@
+# trace a process and follow its child processes
+sudo strace -f -p <pid>
+
+# trace and outputs to a file (-ff creates one file per child)
+sudo strace -f -o strace.out -p 5616
+
+# count time, calls and errors for each system call
+strace -c <command>
+
