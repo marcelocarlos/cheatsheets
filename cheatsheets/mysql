@@ -1,0 +1,6 @@
+# import a dump file
+mysql -u root -p < dbdump.db
+mysql_upgrade -u root -p
+
+# create a dump file
+mysqldump --user=root -p --all-databases > dbdump.db
