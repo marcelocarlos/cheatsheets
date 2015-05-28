@@ -1,0 +1,10 @@
+# replace inplace
+sed 's/hello/hi/' file.txt
+sed 's/hello/hi/g' file.txt # for global replacement (not only first occurence)
+
+# replace inplace and backup (adding an extension e.g. bak) the original
+sed -i".bak" 's/hello/hi/' file.txt
+sed -i".bak" 's/hello/hi/g' file.txt # for global replacement (not only first occurence)
+
+# replace entries and re-use part of the string (would replace testA, testB or testC by new(A,B or C), depending on what was found on the occurence
+sed "s/test\([ABC]\)/new\1/g" file.txt
