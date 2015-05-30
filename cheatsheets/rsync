@@ -1,0 +1,12 @@
+# synchronize files from source to target (verbose, compressed, recursive, preserving permissions, time, group, owner and skip files that are newer on the receiver)
+rsync -vzrptgou source/ destination/
+
+# similar to above, but including symlinks
+rsync -avzu source/ destination/
+
+# other interesting parameters:
+# --delete     delete files in destination that are not present in source
+# --progress   print information showing the progress of the transfer
+# -n           performs a dry-run
+# -c           skip based on checksum, not mod-time & size
+
