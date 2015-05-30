@@ -11,7 +11,7 @@ find . -type f -perm 555
 # atime (accessed) ctime (last changed)
 find . -type f -mtime -7 -ls 
 
-# Find files modified more than 7 days ago
+# Find files modified more than 7 days ago (use mmin for minutes)
 find . -type f -mtime +7 -ls
 
 # find files larger than 10MB
