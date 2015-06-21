@@ -1,0 +1,16 @@
+# Lists all open files associated with Internet connections
+sudo lsof -i
+sudo lsof -i UDP # UDP only
+sudo lsof -i :52196 # specific port
+
+# look whether you have open connections with a given host
+sudo lsof -i@192.168.1.74
+
+# Lists all open files associated with a particular PID
+sudo lsof -p 3172
+
+# Show established connections (same for LISTEN, CLOSE_WAIT, etc)
+sudo lsof -i | grep -i ESTABLISHED
+
+# Kill everything being run by a specific user (might be dangerous)
+kill -9 `lsof -t -u <username>`
