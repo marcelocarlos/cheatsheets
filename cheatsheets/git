@@ -69,3 +69,12 @@ git merge upstream/master
 
 # retrieve version of a file from a given commit
 git checkout <commit> path/to/file
+
+# merging all commits of a branch into a single commit (good for code review)
+git checkout <my_branch>
+git checkout -b <new_branch_single>
+git reset --soft <commit preceding your first change in my_branch>
+git commit -m "single commit with all changes"
+git diff <my_branch>..<new_branch_single> # this must return empty
+git rebase origin/master
+git push origin <new_branch_single>
