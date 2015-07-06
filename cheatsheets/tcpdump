@@ -1,0 +1,5 @@
+# monitor all eth1 traffic except SSH and DNS
+tcpdump -i eth1 port not 22 and port not 53
+
+# monitor all eth1 traffic from or to a specific host
+tcpdump -i eth1 host 1.2.3.4
