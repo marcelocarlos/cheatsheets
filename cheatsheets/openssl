@@ -1,0 +1,6 @@
+# generate a self-signed certificate
+openssl req -x509 -nodes -sha256 -days 365 -newkey rsa:2048 -keyout cert.key -out cert.pem
+
+# ec certificate
+openssl ecparam -genkey -out eckey.pem -name prime256v1
+openssl req -x509 -new -key eckey.pem -out cert.pem

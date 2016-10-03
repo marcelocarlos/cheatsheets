@@ -1,0 +1,27 @@
+# Building an image (cd to a dir container a Dockerfile)
+docker build -t <image-name> .
+
+# Running a container
+docker run -t <image-name>
+
+# Running a container and executing a command
+docker run -t <image-name> <command (e.g. ls -l /tmp)>
+
+# Running and exposing ports
+docker run -t -p <local-port>:<container-port> --name <container-name> <image-name>
+
+# Run and attach a host dir to the container
+docker run -t -v <host-dir-path>:<container-dir-path> <image-name>
+
+# Start a stopped container
+docker start <container-name>
+
+# Attach to a running container
+docker attach <container-name>
+
+# Start and attach to a container
+docker start -a <container-name>
+
+# Run a command to a container (e.g. to obtain a shell)
+docker exec -i -t <container-name> /bin/bash
+

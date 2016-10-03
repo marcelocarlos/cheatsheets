@@ -1,0 +1,10 @@
+# list all available versions:
+rbenv install -l
+
+# install a Ruby version:
+rbenv install 2.0.0-p247
+# if there is a .ruby-version in the current directory, just run:
+rbenv install
+rbenv rehash
+
+gem install bundler
