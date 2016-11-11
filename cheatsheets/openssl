@@ -4,3 +4,6 @@ openssl req -x509 -nodes -sha256 -days 365 -newkey rsa:2048 -keyout cert.key -ou
 # ec certificate
 openssl ecparam -genkey -out eckey.pem -name prime256v1
 openssl req -x509 -new -key eckey.pem -out cert.pem
+
+# verify a certificate chain
+openssl verify -verbose -CAfile RootCert.pem -untrusted <(cat Intermediate2.pem && echo "" & Intermediate1.pem) UserCert.pem

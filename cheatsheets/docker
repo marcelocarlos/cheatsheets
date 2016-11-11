@@ -25,3 +25,13 @@ docker start -a <container-name>
 # Run a command to a container (e.g. to obtain a shell)
 docker exec -i -t <container-name> /bin/bash
 
+# Quick start a centos container with a shell
+docker run -t -i centos:6.8 /bin/bash
+
+# Remove all containers
+docker ps -a | tail -n +2 | cut -d' ' -f1 | xargs docker rm  -f
+docker rm -f $(docker ps -a -q)
+
+# Remove all dangling intermediate images
+docker rmi $(docker images | grep "<none>" | awk '{ print $3; }')
+docker rmi $(docker images -f "dangling=true" -q)
