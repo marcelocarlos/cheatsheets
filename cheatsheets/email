@@ -1,0 +1,2 @@
+# send a test email from the command line
+echo "Subject: sendmail test" | sendmail -v my@email.com
