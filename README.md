@@ -7,7 +7,7 @@ A script to display cheat sheets
 Installation instructions for OS X and Linux
 
 ```bash
-git clone https://github.com/marcelocarlosbr/cheatsheets.git
+git clone git@github.com:marcelocarlos/cheatsheets.git
 cd cheatsheets
 ./install.sh
 ```
