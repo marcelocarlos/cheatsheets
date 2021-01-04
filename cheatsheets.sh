@@ -6,7 +6,6 @@
 VERSION="1.0.0"
 # GLOBAL VARIABLES
 APP_NAME=$(basename $0)
-APP_PATH=$(dirname "$0")
 CONFIG_FILENAME=".cheatsheetsc"
 
 # These colours are supported by the cheat sheet files
